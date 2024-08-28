@@ -77,10 +77,10 @@ export const NAV_LINKS = [
   export const SOCIALS = {
     title: 'Social',
     links: [
-      '/facebook.svg',
-      '/instagram.svg',
-      '/twitter.svg',
-      '/youtube.svg',
-      '/wordpress.svg',
+      '/assets/facebook.svg',
+      '/assets/instagram.svg',
+      '/assets/twitter.svg',
+      '/assets/youtube.svg',
+      '/assets/wordpress.svg',
     ],
   };

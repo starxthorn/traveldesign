@@ -1,10 +1,23 @@
-import React from "react";
+"use client";
 import Button from "./Button";
 import Image from "next/image";
+import { motion, useScroll } from "framer-motion";
+import { useRef } from "react";
 
 const GetApp = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", ".7 1"],
+  });
   return (
-    <section className="flexCenter w-full flex-col pb-[100px]">
+    <motion.section
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
+      className="flexCenter w-full flex-col pb-[100px]"
+    >
       <div className="get-app">
         <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
           <h2 className="bold-40 lg:bold-64 xl:max-w-[320px]">
@@ -44,7 +57,7 @@ const GetApp = () => {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
